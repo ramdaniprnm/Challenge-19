@@ -1,0 +1,24 @@
+{
+  "name": "challenge-19",
+  "version": "1.0.0",
+  "description": "Web",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ramdaniprnm/Challenge-19.git"
+  },
+  "keywords": [
+    "JS",
+    "NodeJS"
+  ],
+  "author": "Ramdani",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ramdaniprnm/Challenge-19/issues"
+  },
+  "homepage": "https://github.com/ramdaniprnm/Challenge-19#readme"
+}

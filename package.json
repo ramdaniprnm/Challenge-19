@@ -20,5 +20,8 @@
   "bugs": {
     "url": "https://github.com/ramdaniprnm/Challenge-19/issues"
   },
-  "homepage": "https://github.com/ramdaniprnm/Challenge-19#readme"
+  "homepage": "https://github.com/ramdaniprnm/Challenge-19#readme",
+  "devDependencies": {
+    "eslint-config-prettier": "^9.1.0"
+  }
 }

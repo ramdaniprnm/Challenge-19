@@ -1,0 +1,18 @@
+/* * {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+} */
+
+
+.table {
+  width: 100%;
+}
+
+.table, tr, th, td {
+
+  border-collapse: collapse;  
+  border: 1px solid #ccc;
+
+}

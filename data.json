@@ -1,1 +1,52 @@
-{}
+[
+  {
+    "name": "ehkjkjwa",
+    "height": "",
+    "weight": "",
+    "birthdate": "",
+    "married": null
+  },
+  {
+    "name": "dihyah",
+    "height": "180",
+    "weight": "",
+    "birthdate": "",
+    "married": "on"
+  },
+  {
+    "name": "ramdani",
+    "height": "167",
+    "weight": "65",
+    "birthdate": "",
+    "married": null
+  },
+  {},
+  {
+    "name": "cmon",
+    "height": "177",
+    "weight": "59",
+    "birthdate": "2066-12-14",
+    "married": null
+  },
+  {
+    "name": "hola",
+    "height": "123",
+    "weight": "42",
+    "birthdate": "2006-03-14",
+    "married": "Yes"
+  },
+  {
+    "name": "rohimat",
+    "height": "124",
+    "weight": "22",
+    "birthdate": "2001-02-12",
+    "married": "Yes"
+  },
+  {
+    "name": "dirga",
+    "height": "124",
+    "weight": "29",
+    "birthdate": "2005-04-12",
+    "married": "No"
+  }
+]

@@ -1,52 +1,38 @@
 [
   {
-    "name": "ehkjkjwa",
-    "height": "",
-    "weight": "",
-    "birthdate": "",
-    "married": null
+    "id": "0",
+    "name": "buaji wadaw mawa",
+    "height": "150",
+    "weight": "50",
+    "birthdate": "1992-04-12",
+    "married": "true"
   },
   {
-    "name": "dihyah",
-    "height": "180",
-    "weight": "",
-    "birthdate": "",
-    "married": "on"
-  },
-  {
-    "name": "ramdani",
-    "height": "167",
-    "weight": "65",
-    "birthdate": "",
-    "married": null
-  },
-  {},
-  {
-    "name": "cmon",
+    "name": "haji tomat",
     "height": "177",
-    "weight": "59",
-    "birthdate": "2066-12-14",
-    "married": null
+    "weight": "67",
+    "birthdate": "1988-09-14",
+    "married": false
   },
   {
-    "name": "hola",
-    "height": "123",
-    "weight": "42",
-    "birthdate": "2006-03-14",
-    "married": "Yes"
-  },
-  {
-    "name": "rohimat",
+    "name": "delete bau",
     "height": "124",
-    "weight": "22",
-    "birthdate": "2001-02-12",
-    "married": "Yes"
+    "weight": "55",
+    "birthdate": "1995-02-12",
+    "married": "true"
   },
   {
-    "name": "dirga",
+    "name": "menunggu",
     "height": "124",
-    "weight": "29",
-    "birthdate": "2005-04-12",
-    "married": "No"
+    "weight": "35",
+    "birthdate": "1998-02-12",
+    "married": "false"
+  },
+  {
+    "name": "Mang I hat",
+    "height": "166",
+    "weight": "55",
+    "birthdate": "1990-05-14",
+    "married": "true"
   }
 ]

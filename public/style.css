@@ -1,18 +1,137 @@
-/* * {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-} */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #dae5ed; 
+  padding: 0;
+  margin: 0;
+}
 
 
-.table {
+
+h1 {
+  color: #333;
+}
+
+a[href="/add"] {
+  display: block;
+  text-align: center;
+  margin: 10px auto;
+  padding: 10px 20px;
+  color: white;
+  background-color: #367efc; 
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+a[href="/add"]:hover {
+  text-decoration: none;
+  opacity: 1;
+}
+
+table {
+  margin: 0 auto;
+  border-collapse: collapse;
   width: 100%;
+  /* border: 1px solid #ddd; */
+}
+
+th, td {
+  padding: 12px 15px;
+  text-align: center;
+  /* border-bottom: 1px solid #ddd; */
+}
+
+th {
+  color: #000;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+a {
+  color: #1e90ff;
+  text-decoration: none;
+  margin-right: 10px;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+td:last-child {
+  text-align: center;
 }
 
 .table, tr, th, td {
-
+  margin-top: 10px;
   border-collapse: collapse;  
-  border: 1px solid #ccc;
+  /* border: 1px solid #ccc; */
 
+}
+
+/* untuk add */
+form {
+  max-width: auto;
+  margin:  auto;
+  padding: 100;
+  border-radius: 8px;
+  background-color: #f0f8ff; 
+}
+
+form label {
+  display: block;
+  font-weight: bold;
+  margin-top: 10px;
+  color: #333;
+}
+
+form input[type="text"],
+form input[type="number"],
+form input[type="date"],
+form select {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+/* submit dan cancel */
+.submit-button, .cancel-button {
+  width: 100%;
+  padding: 15px;
+  font-size: 12.5px;
+  font-weight: bold;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+/* Submit */
+.submit-button {
+  background-color: #04a96d; 
+  text-align: center;
+}
+
+.submit-button:hover {
+  background-color: #04a96d; 
+}
+
+/* Cancel */
+.cancel-button {
+  background-color: #0000ff;
+  text-align: center;
+  margin-top: 10px; 
+}
+
+.cancel-button:hover {
+  background-color: #000080; 
+}
+
+.emoji {
+    font-size: 2em;
+    color: #ff6600;
 }

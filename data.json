@@ -1,38 +1,30 @@
 [
   {
-    "id": "0",
-    "name": "buaji wadaw mawa",
-    "height": "150",
+    "name": "Atep Baliho",
+    "height": "176",
     "weight": "50",
-    "birthdate": "1992-04-12",
-    "married": "true"
-  },
-  {
-    "name": "haji tomat",
-    "height": "177",
-    "weight": "67",
-    "birthdate": "1988-09-14",
+    "birthdate": "2002-05-14",
     "married": false
   },
   {
-    "name": "delete bau",
-    "height": "124",
-    "weight": "55",
-    "birthdate": "1995-02-12",
-    "married": "true"
+    "name": "Atep kusniadi",
+    "height": "177",
+    "weight": "57",
+    "birthdate": "2007-03-14",
+    "married": true
   },
   {
-    "name": "menunggu",
-    "height": "124",
-    "weight": "35",
-    "birthdate": "1998-02-12",
-    "married": "false"
+    "name": "Satria Hytam",
+    "height": "180",
+    "weight": "50",
+    "birthdate": "2005-09-05",
+    "married": true
   },
   {
-    "name": "Mang I hat",
-    "height": "166",
-    "weight": "55",
-    "birthdate": "1990-05-14",
-    "married": "true"
+    "name": "Ujang Mahmud",
+    "height": "170",
+    "weight": "58",
+    "birthdate": "1990-02-14",
+    "married": true
   }
 ]

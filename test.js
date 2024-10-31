@@ -25,6 +25,7 @@ function getQueryParam(url, key) {
 }
 
 const server = http.createServer((req, res) => {
+  // rute style.css
   if (req.url === "/style.css") {
     fs.readFile(path.join(__dirname, "public", "style.css"), (err, content) => {
       if (err) {
@@ -36,11 +37,12 @@ const server = http.createServer((req, res) => {
       res.end(content);
     });
     return;
+    // rute home 3000
   } else if (req.url === "/") {
     res.writeHead(200, { "Content-Type": "text/html" });
     let html = `
     <link rel="stylesheet" href="/style.css"/>
-    <div style="width: 95%; margin: 0 auto">
+    <div style="width: 95%; margin: 20px auto">
     <h1 style="margin-top: 3rem;">JSON CRUD (Create, Read, Update, Delete)</h1>
     <a href="/add">Create</a>
     <div>
@@ -63,20 +65,21 @@ const server = http.createServer((req, res) => {
     html += `</table></div></div>`;
     res.write(html);
     res.end();
+    // rute add
   } else if (req.url === "/add") {
     res.writeHead(200, { "Content-Type": "text/html" });
     let form = `
       <link rel="stylesheet" href="/style.css"/>
-      <div style="width: 95%; margin: 0 auto">
+      <div style="width: 100%; margin: 0 auto">
       <form method="POST" action="/add-item" style="border: .1rem solid #e0e0e0; padding: 1rem;">
         <input type="text" name="name" placeholder="name" required /><br />
         <input type="number" placeholder="height" name="height" required /><br />
-        <input type="number" type name="weight" placeholder="weight" required /><br />
+        <input type="number" step="0.01" min = "0" name="weight" placeholder="weight" required /><br />
         <input type="date" name="birthdate" placeholder="birthdate" required /><br />
         <select name="married" required>
           <option value="" disabled selected>Is Married?</option>
-          <option value="true">true</option>
-          <option value="false">false</option>
+          <option value="true">yes</option>
+          <option value="false">Not Yet</option>
         </select><br/>  
         <button type="submit" class ="submit-button">Save</button>
         <button type="button" class ="cancel-button" onclick="window.location.href='/';">Cancel</button>
@@ -84,6 +87,7 @@ const server = http.createServer((req, res) => {
       </div>`;
     res.write(form);
     res.end();
+    // fungsi add
   } else if (req.url === "/add-item" && req.method === "POST") {
     let body = '';
     req.on("data", content => body += content.toString());
@@ -92,15 +96,16 @@ const server = http.createServer((req, res) => {
       const newEntry = {
         name: params.get("name"),
         height: params.get("height"),
-        weight: params.get("weight"),
+        weight: parseFloat(params.get("weight")),
         birthdate: params.get("birthdate"),
-        married: params.get("married") === "true"
+        married: params.get("married") === "true" ? "yes" : "Not Yet"
       };
       data.push(newEntry);
       fs.writeFileSync("data.json", JSON.stringify(data, null, 2));
       res.writeHead(301, { Location: "/" });
       res.end();
     });
+    //rute update
   } else if (req.url.startsWith("/update")) {
     const id = parseInt(getQueryParam(req.url, "id"), 10);
     if (!isNaN(id) && id >= 0 && id < data.length) {
@@ -113,11 +118,11 @@ const server = http.createServer((req, res) => {
         <input type="hidden" name="id" value="${id}" />
         <input type="text" name="name" value="${item.name}" required /><br />
         <input type="number" name="height" value="${item.height}" required /><br />
-        <input type="number" name="weight" value="${item.weight}" required /><br />
+        <input type="number" step="0.01" min = "0" name="weight" value="${item.weight}" required /><br />
         <input type="date" name="birthdate" value="${item.birthdate}" required /><br />
         <select name="married" required>
-          <option value="true" ${item.married ? "selected" : ""}>true</option>
-          <option value="false" ${!item.married ? "selected" : ""}>false</option>
+          <option value="true" ${item.married === "Yes" ? "selected" : ""}>Yes</option>
+          <option value="false" ${item.married === "Not Yet" ? "selected" : ""}>Not Yet</option>
         </select>
         <br />
         <button type="submit" class="submit-button">Save</button>
@@ -125,6 +130,7 @@ const server = http.createServer((req, res) => {
       </form>`;
       res.write(form);
       res.end();
+      // fungsi update 
     } else if (req.url === "/update-item" && req.method === "POST") {
       let body = '';
       req.on("data", content => body += content.toString());
@@ -135,9 +141,9 @@ const server = http.createServer((req, res) => {
           data[id] = {
             name: params.get("name"),
             height: params.get("height"),
-            weight: params.get("weight"),
+            weight: parseFloat(params.get("weight")),
             birthdate: params.get("birthdate"),
-            married: params.get("married") === "true"
+            married: params.get("married") === "true" ? "yes" : "Not Yet"
           };
           fs.writeFileSync("data.json", JSON.stringify(data, null, 2));
         }
@@ -145,6 +151,7 @@ const server = http.createServer((req, res) => {
         res.end();
       });
     }
+    // rute delete
   } else if (req.url.startsWith("/delete") && req.method === "GET") {
     const id = parseInt(getQueryParam(req.url, "id"), 10);
     if (!isNaN(id) && id >= 0 && id < data.length) {
@@ -153,17 +160,17 @@ const server = http.createServer((req, res) => {
         fs.writeFileSync("data.json", JSON.stringify(data, null, 2));
         res.writeHead(302, { Location: "/" });
       } catch (err) {
-        console.error("Error saving data after deletion:", err);
+        console.error("Data ini tidak bisa dihapus:", err);
         res.writeHead(500, { "Content-Type": "text/plain" });
-        res.end("Error saving data after deletion.");
+        res.end("Error tidak bisa membaca data tersebut.");
       }
     } else {
       res.writeHead(404, { "Content-Type": "text/plain" });
-      res.end("Data not found or invalid ID.");
+      res.end("Data tidak bisa ditemukan invalid ID.");
     }
     res.end();
   }
 });
 server.listen(3000, () => {
-  console.log("Server running on port 3000");
+  console.log("Server berjalan di port 3000");
 });

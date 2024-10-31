@@ -1,30 +1,86 @@
 [
   {
-    "name": "Atep Baliho",
-    "height": "176",
-    "weight": "50",
-    "birthdate": "2002-05-14",
-    "married": false
+    "name": "Atep Baliho :0",
+    "height": "150",
+    "weight": 55,
+    "birthdate": "1992-03-15",
+    "married": "yes"
   },
   {
     "name": "Atep kusniadi",
     "height": "177",
-    "weight": "57",
+    "weight": 57.14,
     "birthdate": "2007-03-14",
-    "married": true
+    "married": "yes"
   },
   {
     "name": "Satria Hytam",
     "height": "180",
-    "weight": "50",
+    "weight": 50,
     "birthdate": "2005-09-05",
-    "married": true
+    "married": "yes"
   },
   {
-    "name": "Ujang Mahmud",
-    "height": "170",
-    "weight": "58",
-    "birthdate": "1990-02-14",
-    "married": true
+    "name": "rohimat terluka",
+    "height": "190",
+    "weight": 80,
+    "birthdate": "1990-08-15",
+    "married": "Not Yet"
+  },
+  {
+    "name": "Doney",
+    "height": "192",
+    "weight": 90,
+    "birthdate": "1992-04-12",
+    "married": "Not Yet"
+  },
+  {
+    "name": "Luq Man",
+    "height": "178",
+    "weight": 70.23,
+    "birthdate": "2001-07-16",
+    "married": "yes"
+  },
+  {
+    "name": "Ujang espada",
+    "height": "200",
+    "weight": 85,
+    "birthdate": "1950-03-14",
+    "married": "yes"
+  },
+  {
+    "name": "usep",
+    "height": "125",
+    "weight": 24,
+    "birthdate": "1992-04-12",
+    "married": "Not Yet"
+  },
+  {
+    "name": "alnan11",
+    "height": "1241",
+    "weight": 929,
+    "birthdate": "1992-04-12",
+    "married": "yes"
+  },
+  {
+    "name": "ruknasd",
+    "height": "1241",
+    "weight": 56,
+    "birthdate": "1992-04-12",
+    "married": "Not Yet"
+  },
+  {
+    "name": "dadas",
+    "height": "124",
+    "weight": 8.124,
+    "birthdate": "1124-04-12",
+    "married": "Not Yet"
+  },
+  {
+    "name": "ruhiyat streinter",
+    "height": "142",
+    "weight": 41.02,
+    "birthdate": "1992-04-12",
+    "married": "Not Yet"
   }
 ]
